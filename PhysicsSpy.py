@@ -18,7 +18,9 @@ class PhysicsSpy(MemorySpyInterface):
 
 if __name__ == "__main__":
 
-    physicSpy = PhysicsSpy(".configFiles/physics.json")
-    data = physicSpy.spy()
-    for key in data.keys():
-        print(key,data[key])
+    physicSpy = PhysicsSpy("./configFiles/physics.json")
+
+    while True:
+        data = physicSpy.spy()
+        for key in data.keys():
+            print(key,data[key])
